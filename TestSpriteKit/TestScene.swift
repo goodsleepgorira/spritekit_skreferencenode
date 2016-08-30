@@ -29,9 +29,8 @@ class TestScene:SKScene {
         let location = touches.first!.locationInNode(self)
         let node = nodeAtPoint(location) as! SKSpriteNode
         
-        if(node == monkey || node == speaker) {
-            //タッチしたノードをターゲットに設定する。
-            targetNode = node
+        if(node == speaker) {
+            print("スピーカーをタッチしました。")
         }
     }
 
@@ -47,6 +46,6 @@ class TestScene:SKScene {
         let action = SKAction.moveTo(CGPoint(x:location.x, y:location.y), duration:0.1)
             
         //アクションを実行する。
-        targetNode.runAction(action)
+        monkey.runAction(action)
     }
 }
