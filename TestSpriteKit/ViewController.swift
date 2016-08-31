@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         //SKSファイルを指定してSKSceneインスタンスを生成する。
         let scene = TestScene(fileNamed: "TestScene")
         
+        //シーンのサイズを画面に合わせる。
+        scene?.scaleMode = .AspectFit
+        
         //現在シーンを設定する。
         skView.presentScene(scene)
         
